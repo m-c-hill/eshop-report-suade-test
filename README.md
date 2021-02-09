@@ -45,18 +45,27 @@ Please ensure all packages are installed in your environment before running the 
 
 Project Structure
 -----------------
-├── eshop-report-suade-test
-    │   ├── README
-    │   ├── run.py
-    │   └── eshopreport
-    │       ├── __init__.py
-    │       ├── eshop.db
-    │       ├── generate_data.py
-    │       ├── models.py
-    │       ├── routes.py
-    │       ├── templates (contains html files to render)
-    │       └── tests
-    │           └── test_report.py
+**run.py**:
+Runs the Flask app
+
+**__init__.py**
+Sets up the Flask app
+
+**generate_data.py**
+Generates the data for the Flask sqlite database (eshopreport/eshop.db) by importing data from each csv file in eshopreport/data. This is only run for testing purposes to initially import the data or reset the database.
+
+**models.py**
+Contains the models required for the eshopreport app. Each class which extends db.Model represents a unique table in the database. 
+The final class, ReportForDate, generates the necessary report statistics for this project. A seperate static method is used for each statistic, which in turn creates an SQL script using sqlalchemy to query the database.
+
+**routes.py**
+Routes for eshop report application.
+
+**test_report.py**
+Unit testing for the get_statistic methods in class ReportForDate in module models.
+
+**eshop.db**
+Database containing the tables order, order_line, product, promotion, product_promotion & vendor_commission
 
 
 Testing
