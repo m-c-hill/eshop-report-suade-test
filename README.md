@@ -18,16 +18,19 @@ The user has the option to input a date on the application's homepage, which the
 How to run the application
 --------------------------
 In your terminal:
+
+```sh
 $ mkdir eshopreport
 $ cd eshopreport
 $ git clone git@github.com:m-c-hill/eshop-report-suade-test.git
 $ python run.py
+```
 
 Open http://127.0.0.1:5000/ and enter a date to generate a report.
 
 Requirements
 ------------
-Python 3.9
+Python version: 3.9
 
 Packages used in this project include:
 * datetime
@@ -42,8 +45,27 @@ Please ensure all packages are installed in your environment before running the 
 
 Project Structure
 -----------------
+├── eshop-report-suade-test
+    │   ├── README
+    │   ├── run.py
+    │   └── eshopreport
+    │       ├── __init__.py
+    │       ├── eshop.db
+    │       ├── generate_data.py
+    │       ├── models.py
+    │       ├── routes.py
+    │       ├── templates (contains html files to render)
+    │       └── tests
+    │           └── test_report.py
 
 
 Testing
 -------
+To run the unit testing for this application, within the eshopreport driectory:
 
+```sh
+$ cd tests
+$ python test_report.py
+```
+
+This will run seven tests for the date 02-Aug-2019. Each test compares a seperate stastics from the report (calculcated by a corresponding method from the class ReportForDate in models.py) and compares it to a value calculated by hand.
