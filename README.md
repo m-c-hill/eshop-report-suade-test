@@ -56,7 +56,7 @@ Generates the data for the Flask sqlite database (eshopreport/eshop.db) by impor
 
 **models.py**<br />
 Contains the models required for the eshopreport app. Each class which extends db.Model represents a unique table in the database. 
-The final class, ReportForDate, generates the necessary report statistics for this project. A seperate static method is used for each statistic, which in turn creates an SQL script using sqlalchemy to query the database.<br /><br />
+The final class, ReportForDate, generates the necessary report statistics for this project. A separate static method is used for each statistic, which in turn creates an SQL script using sqlalchemy to query the database.<br /><br />
 
 **routes.py**<br />
 Routes for eshop report application.<br /><br />
@@ -77,4 +77,4 @@ $ cd tests
 $ python test_report.py
 ```
 
-This will run seven tests for the date 02-Aug-2019. Each test compares a seperate stastic from the report (calculcated by a corresponding method from the class ReportForDate in models.py) and compares it to a value calculated by hand.
+This will run seven tests for the date 02-Aug-2019. Each test compares a separate stastic from the report (calculcated by a corresponding method from the class ReportForDate in models.py) and compares it to a value calculated by hand.
