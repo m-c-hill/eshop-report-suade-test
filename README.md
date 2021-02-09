@@ -77,4 +77,4 @@ $ cd tests
 $ python test_report.py
 ```
 
-This will run seven tests for the date 02-Aug-2019. Each test compares a separate stastic from the report (calculcated by a corresponding method from the class ReportForDate in models.py) and compares it to a value calculated by hand.
+This will run seven tests for the date 02-Aug-2019. Each test compares a separate statistic from the report (calculcated by a corresponding method from the class ReportForDate in models.py) and compares it to a value calculated by hand.
