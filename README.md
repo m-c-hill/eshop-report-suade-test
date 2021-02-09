@@ -48,7 +48,7 @@ Project Structure
 **run.py**:<br />
 Runs the Flask app<br /><br />
 
-**__init__.py**<br />
+**\_\_init\_\_.py**<br />
 Sets up the Flask app<br /><br />
 
 **generate_data.py**<br />
