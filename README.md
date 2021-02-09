@@ -45,27 +45,27 @@ Please ensure all packages are installed in your environment before running the 
 
 Project Structure
 -----------------
-**run.py**:
-Runs the Flask app
+**run.py**:<br />
+Runs the Flask app<br /><br />
 
-**__init__.py**
-Sets up the Flask app
+**__init__.py**<br />
+Sets up the Flask app<br /><br />
 
-**generate_data.py**
-Generates the data for the Flask sqlite database (eshopreport/eshop.db) by importing data from each csv file in eshopreport/data. This is only run for testing purposes to initially import the data or reset the database.
+**generate_data.py**<br />
+Generates the data for the Flask sqlite database (eshopreport/eshop.db) by importing data from each csv file in eshopreport/data. This is only run for testing purposes to initially import the data or reset the database.<br /><br />
 
-**models.py**
+**models.py**<br />
 Contains the models required for the eshopreport app. Each class which extends db.Model represents a unique table in the database. 
-The final class, ReportForDate, generates the necessary report statistics for this project. A seperate static method is used for each statistic, which in turn creates an SQL script using sqlalchemy to query the database.
+The final class, ReportForDate, generates the necessary report statistics for this project. A seperate static method is used for each statistic, which in turn creates an SQL script using sqlalchemy to query the database.<br /><br />
 
-**routes.py**
-Routes for eshop report application.
+**routes.py**<br />
+Routes for eshop report application.<br /><br />
 
-**test_report.py**
-Unit testing for the get_statistic methods in class ReportForDate in module models.
+**test_report.py**<br />
+Unit testing for the get_statistic methods in class ReportForDate in module models.<br /><br />
 
-**eshop.db**
-Database containing the tables order, order_line, product, promotion, product_promotion & vendor_commission
+**eshop.db**<br />
+Database containing the tables order, order_line, product, promotion, product_promotion & vendor_commission<br /><br />
 
 
 Testing
@@ -77,4 +77,4 @@ $ cd tests
 $ python test_report.py
 ```
 
-This will run seven tests for the date 02-Aug-2019. Each test compares a seperate stastics from the report (calculcated by a corresponding method from the class ReportForDate in models.py) and compares it to a value calculated by hand.
+This will run seven tests for the date 02-Aug-2019. Each test compares a seperate stastic from the report (calculcated by a corresponding method from the class ReportForDate in models.py) and compares it to a value calculated by hand.
