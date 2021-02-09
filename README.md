@@ -65,7 +65,7 @@ Routes for eshop report application.<br /><br />
 Unit testing for the get_statistic methods in class ReportForDate in module models.<br /><br />
 
 **eshop.db**<br />
-Database containing the tables order, order_line, product, promotion, product_promotion & vendor_commission<br /><br />
+Database containing the tables: order, order_line, product, promotion, product_promotion & vendor_commission.<br /><br />
 
 
 Testing
